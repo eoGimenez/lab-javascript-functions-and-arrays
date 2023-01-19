@@ -1,19 +1,54 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
-
-
+function maxOfTwoNumbers(num1, num2) {
+  let numMax;
+  if (num1 > num2) {
+    numMax = num1;
+    return numMax;
+  } else if (num1 < num2) {
+    numMax = num2;
+    return numMax;
+  }else {
+    return num1, num2;
+  }
+}
+maxOfTwoNumbers (10, 11);
 
 // Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpo'];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  //let wordNull = null;
+  let wordMax = "";
+  if (!words.length) {
+    wordMax = null;
+  }else for (let i = 0; i < words.length; i++) {
+    if (wordMax.length < words[i].length){
+      wordMax = words[i];
+    }
+  }
+  return wordMax;
+}
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+  let suma = 0;
+  if (!numbers) {
+    return suma
+  }
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers.length == 1) {
+      return numbers[0];
+    }else if (numbers == 0) {
+      suma = suma + 0;
+    } else {
+    suma = suma + numbers[i]}
+  }
+  return suma;
+}
 
 
 
@@ -26,14 +61,35 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbersAvg) {
+  let sumaAvg = 0;
+  if (numbersAvg.length === 0) {
+    return null;
+  } else {
+    for (i = 0; i < numbersAvg.length; i++) {
+      sumaAvg += numbersAvg[i]
+    }
+    sumaAvg = sumaAvg / numbersAvg.length
+  }
+  return sumaAvg;
+}
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
-
+function averageWordLength(wordsArr) {
+  let stringAvg = 0;
+  if (!wordsArr.length) {
+    return null;
+  } else {
+    for (i = 0; i < wordsArr.length; i++) {
+        stringAvg += wordsArr[i].length;
+      }
+    }
+    stringAvg = (stringAvg / wordsArr.length);
+    return stringAvg;
+  }
 // Bonus - Iteration #4.1
 function avg() {}
 
