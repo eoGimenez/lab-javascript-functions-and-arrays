@@ -53,7 +53,9 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arr) {
+  sumNumbers()
+}
 
 
 
@@ -91,7 +93,26 @@ function averageWordLength(wordsArr) {
     return stringAvg;
   }
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(mixedArr) {
+  let totalAvg = 0;
+  if (!mixedArr.length) {
+    return null;
+  }else {
+    mixedArr.forEach(function(item, i){
+      if (item[i] == "") {
+        totalAvg += item[i].length;
+      } else if (item[i] == true) {
+        totalAvg += 1
+      } else if ( item[i] == false) {
+        totalAvg += 0
+      } else {
+        totalAvg += item[i]
+      }
+    })
+  } 
+  totalAvg = (totalAvg / mixedArr.leangth);
+  return totalAvg;
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -108,14 +129,32 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
-
-
+function uniquifyArray(wordsUnique) {
+  let unifArr = [];
+  if (!wordsUnique.length) {
+    return null;
+  }else {
+    wordsUnique.forEach(function(buscador, i){
+      if (unifArr.indexOf(buscador) === -1) {
+        unifArr.push(buscador)
+      }
+    })
+    return unifArr
+  }
+}
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(arrayToLook, wordToSearch) {
+  if (!arrayToLook.length) {
+    return null;
+  }else {
+    if (arrayToLook.includes(wordToSearch) === true) {
+      return true;
+    } else return false;
+  }
+}
 
 
 
@@ -134,7 +173,19 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(arrayToCount, wordToCount) {
+  let counter = 0
+  if (!arrayToCount.length) {
+    return 0;
+  } else {
+    arrayToCount.forEach(function(word){
+      if (word == wordToCount) {
+        counter ++
+      }
+    })
+  }
+  return counter;
+}
 
 
 
@@ -162,7 +213,9 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+
+}
 
 
 
